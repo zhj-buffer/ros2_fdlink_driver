@@ -3,7 +3,10 @@
 ```
 mkdir -p dev_ws/src && cd dev_ws/src && git clone https://github.com/zhj-buffer/ros2_fdlink_driver.git
 cd ../ && colcon build 
+
+source install/setup.bash
 ```
+
 
 
 # Launch 
