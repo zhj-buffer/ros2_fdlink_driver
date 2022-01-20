@@ -373,9 +373,9 @@ void ahrsBringup::processLoop()
         imu_data.angular_velocity.x = ahrs_frame_.frame.data.data_pack.RollSpeed;
         imu_data.angular_velocity.y = -ahrs_frame_.frame.data.data_pack.PitchSpeed;
         imu_data.angular_velocity.z = -ahrs_frame_.frame.data.data_pack.HeadingSpeed;
-        imu_data.linear_acceleration.x = -imu_frame_.frame.data.data_pack.accelerometer_x;
-        imu_data.linear_acceleration.y = imu_frame_.frame.data.data_pack.accelerometer_y;
-        imu_data.linear_acceleration.z = imu_frame_.frame.data.data_pack.accelerometer_z;
+        imu_data.linear_acceleration.x = imu_frame_.frame.data.data_pack.accelerometer_x;
+        imu_data.linear_acceleration.y = -imu_frame_.frame.data.data_pack.accelerometer_y;
+        imu_data.linear_acceleration.z = -imu_frame_.frame.data.data_pack.accelerometer_z;
       }
       imu_pub_->publish(imu_data);
 
